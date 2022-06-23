@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 async function initHeadline() {
-    await initTitle();
-    await initSubtitle();
+    //await initTitle();
+    //await initSubtitle();
     await displayPortrait();
     setTimeout(() => subtitleAnimation(), 800);
     document.querySelector('body').style.overflowY = 'auto';
@@ -280,6 +280,7 @@ function projectModal() {
             fetch('/project_images/' + project_id)
             .then(response => response.json())
             .then(images => {
+                console.log(images)
                 images.forEach(image => {
                     const carousel_item = document.createElement('div');
                     const carousel_img  = document.createElement('img');

@@ -12,4 +12,5 @@ urlpatterns = [
     path("project_languages/<int:project_id>", views.project_languages, name="project_languages")
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
