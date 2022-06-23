@@ -171,7 +171,7 @@
                     {% for project in projects %}
                     <div class="portfolio-child">
                         <div class="project-img-container">
-                            <img class="project-img" src="{% static 'myonlinecv/media/{{project.cover_image}}' %}" alt="{{name}}">
+                            <img class="project-img" src="/media/{{project.cover_image}}" alt="{{name}}">
                         </div>
                         <span class="project-category">{{ project.category }}</span>
                         <h4><strong class="project-name">{{ project.name }}</strong></h4>
