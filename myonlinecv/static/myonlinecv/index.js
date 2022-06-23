@@ -280,14 +280,13 @@ function projectModal() {
             fetch('/project_images/' + project_id)
             .then(response => response.json())
             .then(images => {
-                console.log(images)
                 images.forEach(image => {
                     const carousel_item = document.createElement('div');
                     const carousel_img  = document.createElement('img');
                     carousel_item.className = "carousel-item";
                     carousel_img.className  = "d-block w-100";
-                    carousel_img.src = image.image_url;
-                    carousel_img.alt = image.image_alt;
+                    carousel_img.src = "/static/myonlinecv/media/" + image.name;
+                    carousel_img.alt = image.name;
 
                     carousel_item.append(carousel_img);
                     carousel_inner.append(carousel_item);

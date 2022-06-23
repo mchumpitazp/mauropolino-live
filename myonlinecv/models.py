@@ -5,7 +5,7 @@ from django.db import models
 
 class Project(models.Model):
     name = models.CharField(max_length=255) 
-    cover_image = models.ImageField(upload_to='', default=None)
+    image_name = models.CharField(max_length=255)
     category = models.CharField(max_length=255)
     year = models.PositiveSmallIntegerField()
     description = models.TextField()
@@ -18,16 +18,15 @@ class Project(models.Model):
 
 class Image(models.Model):
     project   = models.ForeignKey(Project, on_delete=models.CASCADE, default=None, related_name="images")
-    image     = models.ImageField(upload_to='')
+    image_name = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.image.name
+        return self.image_name
 
     def serialize(self):
         return {
-            "image_alt": self.image.name,
-            "image_url": self.image.url
+            "name": self.image_name
         }
 
 class ProgrammingLanguage(models.Model):
