@@ -364,9 +364,10 @@ html,
     margin: 0 0.25rem;
 }
 
+/* NOT NEEDED
 .knowledge-item {
     font-size: 1.2rem;
-}
+} */
 
 .link-text-icon {
     font-size: 1.1rem;
