@@ -26,9 +26,10 @@ MEDIA_URL = '/media/'
 SECRET_KEY = 'django-insecure-5ulhdi@6todg=ib&ukyaat($u4d4kv0*n5!cw+=oyyfsu)-8bp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['mauropolino.herokuapp.com']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['mauropolino.herokuapp.com']
 
 
 # Application definition

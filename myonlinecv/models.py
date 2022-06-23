@@ -5,7 +5,7 @@ from django.db import models
 
 class Project(models.Model):
     name = models.CharField(max_length=255) 
-    cover_image = models.ImageField(upload_to='projects/', default=None)
+    cover_image = models.ImageField(upload_to='', default=None)
     category = models.CharField(max_length=255)
     year = models.PositiveSmallIntegerField()
     description = models.TextField()
@@ -18,7 +18,7 @@ class Project(models.Model):
 
 class Image(models.Model):
     project   = models.ForeignKey(Project, on_delete=models.CASCADE, default=None, related_name="images")
-    image     = models.ImageField(upload_to='projects/')
+    image     = models.ImageField(upload_to='')
     timestamp = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
