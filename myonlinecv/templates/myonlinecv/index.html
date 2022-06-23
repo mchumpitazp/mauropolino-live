@@ -18,7 +18,9 @@
 
         <header id="header">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#headline">Mauro Polino</a>
+                <a class="navbar-brand" href="#headline">
+                    <h4>Mauro Polino</h4>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,16 +31,24 @@
                             <a class="nav-link" href="#">Resume</a>
                         </li> -->
                         <li class="nav-item mr-4">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                            <a class="nav-link" href="#portfolio">
+                                <h5>Portfolio</h5>
+                            </a>
                         </li>
                         <li class="nav-item mr-4">
-                            <a class="nav-link" href="#skills">Skills</a>
+                            <a class="nav-link" href="#skills">
+                                <h5>Skills</h5>
+                            </a>
                         </li>
                         <li class="nav-item mr-4">
-                            <a class="nav-link" href="#experience">Experience</a>
+                            <a class="nav-link" href="#experience">
+                                <h5>Experience</h5>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#records">Records</a>
+                            <a class="nav-link" href="#records">
+                                <h5>Records</h5>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -174,7 +184,7 @@
                             <img class="project-img" src="{% static 'myonlinecv/media/' %}{{project.image_name}}" alt="{{name}}">
                         </div>
                         <span class="project-category">{{ project.category }}</span>
-                        <h4><strong class="project-name">{{ project.name }}</strong></h4>
+                        <h3><strong class="project-name">{{ project.name }}</strong></h3>
                         <span class="project-id" hidden>{{ project.id }}</span>
                         <span class="project-year" hidden>{{ project.year }}</span>
                         <span class="project-description" hidden>{{ project.description }}</span>
@@ -211,7 +221,7 @@
                     <div id="modal-header" class="d-flex justify-content-between align-items-center">
                         <div class="d-flex flex-column align-items-left">
                             <h6 id="modal-category"></h6>
-                            <h4 id="modal-name" class="mb-1 mr-2"></h4>
+                            <h3 id="modal-name" class="mb-1 mr-2"></h3>
                         </div>
                         <div id="modal-programming-languages">
                             <i class="devicon-javascript-plain"></i>
@@ -245,7 +255,7 @@
                 <div id="skills-languages" class="mt-2 mb-2">
 
                     <div class="d-flex align-items-center ml-4 mr-4">
-                        <h4 class="mr-3"><i class="bi-translate"></i> Languages</h4>
+                        <h3 class="mr-3"><i class="bi-translate"></i> Languages</h3>
                         <div class="divider"></div>
                     </div>
 
@@ -268,7 +278,7 @@
                 <div id="skills-coding" class="mt-4 mb-2">
                     
                     <div class="d-flex align-items-center ml-4 mr-4">
-                        <h4 class="mr-3"><i class="bi-code-slash"></i> Coding</h4>
+                        <h3 class="mr-3"><i class="bi-code-slash"></i> Coding</h3>
                         <div class="divider"></div>
                     </div>
                     
@@ -322,7 +332,7 @@
 
                 <div id="skills-knowledge" class="mt-4 mb-2">
                     <div class="d-flex align-items-center ml-4 mr-4">
-                        <h4 class="mr-3"><i class="bi-lightbulb"></i> Knowledge</h4>
+                        <h3 class="mr-3"><i class="bi-lightbulb"></i> Knowledge</h3>
                         <div class="divider"></div>
                     </div>
 
@@ -439,14 +449,14 @@
 
         <footer id="footer" class="p-2 pl-4 pr-4">
             <div id="footer-copyrights">
-                <span><small>&copy; 2022 Mauro Chumpitaz Polino</small></span>
+                <h6>&copy; 2022 Mauro Chumpitaz Polino</h6>
             </div>
 
             <div id="footer-links" class="d-flex align-items-center" >
-                <span><small>mchumpitazp@gmail.com</small></span>
-                <span data-toggle="modal" data-target="#modal-contact-me" class="contact-me ml-3"><i class="bi-envelope"></i></span>
-                <a href="https://github.com/mchumpitazp" class="ml-3" target="_blank" rel="noopener noreferrer">
-                    <i class="bi-github"></i>
+                <h6 hidden>mchumpitazp@gmail.com</h6>
+                <h3 data-toggle="modal" data-target="#modal-contact-me" class="contact-me ml-3"><i style="font-size: inherit;" class="bi-envelope"></i></h3>
+                <a href="https://github.com/mchumpitazp" style="margin-left: 2vh;" target="_blank" rel="noopener noreferrer">
+                    <h3><i style="font-size: inherit;" class="bi-github"></i></h3>
                 </a>
             </div>
             
