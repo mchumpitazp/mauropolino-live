@@ -262,12 +262,16 @@ html,
     z-index: 10;
     background-color: white;
     color: black;
-    max-height: 100%;
-    max-width: 40%;
+    width: 40vw;
 }
 
 #modal.active {
     transform: translate(-50%, -50%) scale(1);
+}
+
+#modal-top {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 #modal-btn-close {
@@ -277,17 +281,9 @@ html,
 }
 
 #modal-btn-close i {
-    font-size: 0.6rem;
+    font-size: 1.5vh !important;
     color: rgba(0, 0, 0, 0.7);
     -webkit-text-stroke: 2px;
-}
-
-#modal-top {
-    height: 30%;
-    max-height: 30%;
-    width: auto;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .carousel-control-prev-icon {
@@ -306,24 +302,27 @@ html,
 #modal-category,
 #modal-year {
     opacity: 0.8;
-    font-size: 0.8rem;
     margin: 0;
 }
 
 #modal-name {
-    font-size: 1.4rem;
     font-weight: 600;
     margin: 0;
 }
 
 #modal-programming-languages i {
-    font-size: 1.8rem;
+    font-size: 3vh !important;
     margin-left: 0.5rem;
 }
 
 #modal-description {
     font-weight: 300;
+    font-size: 2vh;
     text-align: justify;
+}
+
+#modal-link h6 {
+    padding: 0.2rem 2rem;
 }
 
 #overlay {
@@ -436,9 +435,8 @@ h6 {
 }
 
 i {
-    font-size: inherit;
+    font-size: inherit !important;
 }
-
 
 .mt-vh-1 {
     margin-top: 0.7vh;
@@ -478,4 +476,4 @@ i {
 
 .h-inline {
     display: inline;
-}
+}   

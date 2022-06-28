@@ -350,6 +350,7 @@ function onWindowResize() {
         document.querySelector('#headline-left-text').style.fontSize = '2vh';
         document.querySelector('#headline-left-subtitle').style.fontSize = '2.3vh';
         document.querySelector('#headline-left-title').style.fontSize = '5vh';
+        document.querySelector('#modal').style.width = '90vw';
     }
 
     window.addEventListener('resize', () => {
@@ -365,6 +366,7 @@ function onWindowResize() {
             document.querySelector('#headline-left-text').style.fontSize = '2vh';
             document.querySelector('#headline-left-subtitle').style.fontSize = '2.3vh';
             document.querySelector('#headline-left-title').style.fontSize = '5vh';
+            document.querySelector('#modal').style.width = '90vw';
 
         } else {
             resizeComponents(45, 100);
@@ -378,6 +380,7 @@ function onWindowResize() {
             document.querySelector('#headline-left-text').style.fontSize = '1rem';
             document.querySelector('#headline-left-subtitle').style.fontSize = '1.5rem';
             document.querySelector('#headline-left-title').style.fontSize = '4rem';
+            document.querySelector('#modal').style.width = '40vw';
         }
     });
 
