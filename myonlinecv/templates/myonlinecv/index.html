@@ -18,29 +18,29 @@
 
         <header id="header">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#headline">
-                    <h4>Mauro Polino</h4>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- <a class="navbar-brand" href="#headline">
+                    <h5>Mauro Polino</h5>
+                </a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <h5 class="navbar-toggler-icon"></h5>
                 </button>
             
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <!-- <li class="nav-item mr-4">
                             <a class="nav-link" href="#">Resume</a>
                         </li> -->
-                        <li class="nav-item mr-4">
+                        <li class="nav-item">
                             <a class="nav-link" href="#portfolio">
                                 <h5>Portfolio</h5>
                             </a>
                         </li>
-                        <li class="nav-item mr-4">
+                        <li class="nav-item">
                             <a class="nav-link" href="#skills">
                                 <h5>Skills</h5>
                             </a>
                         </li>
-                        <li class="nav-item mr-4">
+                        <li class="nav-item">
                             <a class="nav-link" href="#experience">
                                 <h5>Experience</h5>
                             </a>
@@ -64,7 +64,7 @@
                         <span>u</span>
                         <span>r</span>
                         <span>o</span>
-                        &nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
                         <span>P</span>
                         <span>o</span>
                         <span>l</span>
@@ -87,7 +87,7 @@
                     <div id="headline-left-contact">
                         <button type="button" class="contact-me btn btn-outline-light" data-toggle="modal" data-target="#modal-contact-me"> 
                             Contact Me
-                            <i style="font-size: 0.8rem; -webkit-text-stroke: 1px;" class="bi-chevron-right"></i>
+                            <small><i style="-webkit-text-stroke: 1px;" class="bi-chevron-right"></i></small>
                         </button>
                     </div>
                 </div>
@@ -163,20 +163,20 @@
                 <div id="portfolio-header" class="d-flex align-items-center">
                     <h2><strong>Portfolio</strong></h2>
 
-                    <div class="custom-control custom-switch ml-4 mb-1" style="z-index: 0; font-size: 3vh;">
-                        <input type="checkbox" class="custom-control-input" id="portfolio-switch" checked>
+                    <div id="portfolio-switch" class="custom-control custom-switch ml-4 mb-1" style="z-index: 0;">
+                        <input type="checkbox" class="custom-control-input" checked>
                         <label class="custom-control-label" for="portfolio-switch"><small>Scale up</small></label>
                     </div>
                 </div>
                 
 
-                <div id="portfolio-parent" class="mt-vh-1">
+                <div id="portfolio-parent">
                     {% for project in projects %}
-                    <div class="portfolio-child">
+                    <div class="portfolio-child mt-vh-4">
                         <div class="project-img-container">
                             <img class="project-img" src="{% static 'myonlinecv/media/' %}{{project.image_name}}" alt="{{name}}">
                         </div>
-                        <span class="project-category">{{ project.category }}</span>
+                        <h6 class="project-category">{{ project.category }}</h6>
                         <h3><strong class="project-name">{{ project.name }}</strong></h3>
                         <span class="project-id" hidden>{{ project.id }}</span>
                         <span class="project-year" hidden>{{ project.year }}</span>
@@ -243,7 +243,7 @@
                 
                 <h2><strong>Skills</strong></h2>
 
-                <div id="skills-languages" class="mt-vh-3">
+                <div id="skills-languages" class="mt-vh-4">
 
                     <div class="d-flex align-items-center ml-4 mr-4">
                         <h3 class="mr-3"><i class="bi-translate"></i> Languages</h3>
@@ -266,7 +266,7 @@
                     </div>
                 </div>
 
-                <div id="skills-coding" class="mt-vh-3">
+                <div id="skills-coding" class="mt-vh-4">
                     
                     <div class="d-flex align-items-center ml-4 mr-4">
                         <h3 class="mr-3"><i class="bi-code-slash"></i> Coding</h3>
@@ -276,7 +276,7 @@
                     <div class="d-flex flex-wrap justify-content-around mt-vh-2 mb-vh-2">
                         {% for coding_skill in coding_skills %}
                             <div class="coding">
-                                <h4>{{ coding_skill.name }}</h4>
+                                <h5>{{ coding_skill.name }}</h5>
                                 
                                 <div>
                                     {% if coding_skill.name == "SQL" %}
@@ -320,7 +320,7 @@
                     </div>
                 </div>
 
-                <div id="skills-knowledge" class="mt-vh-2">
+                <div id="skills-knowledge" class="mt-vh-4">
                     <div class="d-flex align-items-center ml-4 mr-4">
                         <h3 class="mr-3"><i class="bi-lightbulb"></i> Knowledge</h3>
                         <div class="divider"></div>
@@ -328,7 +328,7 @@
 
                     <div class="d-flex flex-wrap justify-content-around mt-vh-2 mb-vh-2">
                         
-                        <div class="knowledge d-flex flex-column">
+                        <div class="knowledge">
                             <h6 class="secondary-color">FRAMEWORKS</h6>
                             <h5 class="knowledge-item">Django</h5>
                             <h5 class="knowledge-item">React</h5>
@@ -336,17 +336,17 @@
                             <h5 class="knowledge-item">OpenCV</h5>
                         </div>
                         
-                        <div class="knowledge d-flex flex-column">
+                        <div class="knowledge">
                             <h6 class="secondary-color">TOOLS & IDEs</h6>
                             <h5 class="knowledge-item">Git</h5>
-                            <h5 class="knowledge-item">MATLAB</h5>
                             <h5 class="knowledge-item">Xcode</h5>
                             <h5 class="knowledge-item">Android Studio</h5>
+                            <h5 class="knowledge-item">MATLAB</h5>
                             
                         </div>
 
 
-                        <div id="embedded-systems" class="knowledge d-flex flex-column">
+                        <div id="embedded-systems" class="knowledge">
                             <h6 class="secondary-color">EMBEDDED SYSTEMS</h6>
                             <h5 class="knowledge-item">MPLAB X</h5>
                             <h5 class="knowledge-item">Atmel Studio</h5>

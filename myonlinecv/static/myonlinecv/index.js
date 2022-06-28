@@ -341,22 +341,43 @@ function headerNavbar() {
 function onWindowResize() {
     if (window.innerWidth < 992) {
         document.querySelectorAll('.coding').forEach((coding) => {
-            coding.style.flex = '1 0 48%'
+            coding.style.flex = '1 0 48%';
         });
+
+        document.querySelector('#embedded-systems').style.display = 'none';
+        document.querySelector('#portfolio-switch').style.display = 'none';
+        document.querySelector('#headline-left-contact').style.fontSize = '2.2vh';
+        document.querySelector('#headline-left-text').style.fontSize = '2vh';
+        document.querySelector('#headline-left-subtitle').style.fontSize = '2.3vh';
+        document.querySelector('#headline-left-title').style.fontSize = '5vh';
     }
 
     window.addEventListener('resize', () => {
         if (window.innerWidth < 992) {
-            resizeComponents(80, 50, 10);
+            resizeComponents(80, 50, 15);
             document.querySelectorAll('.coding').forEach((coding) => {
                 coding.style.flex = '1 0 48%'
             });
+
+            document.querySelector('#embedded-systems').style.display = 'none';
+            document.querySelector('#portfolio-switch').style.display = 'none';
+            document.querySelector('#headline-left-contact').style.fontSize = '2.2vh';
+            document.querySelector('#headline-left-text').style.fontSize = '2vh';
+            document.querySelector('#headline-left-subtitle').style.fontSize = '2.3vh';
+            document.querySelector('#headline-left-title').style.fontSize = '5vh';
 
         } else {
             resizeComponents(45, 100);
             document.querySelectorAll('.coding').forEach((coding) => {
                 coding.style.flex = '1 0 28%'
-            })
+            });
+
+            document.querySelector('#embedded-systems').style.display = 'block';
+            document.querySelector('#portfolio-switch').style.display = 'block';
+            document.querySelector('#headline-left-contact').style.fontSize = '1rem';
+            document.querySelector('#headline-left-text').style.fontSize = '1rem';
+            document.querySelector('#headline-left-subtitle').style.fontSize = '1.5rem';
+            document.querySelector('#headline-left-title').style.fontSize = '4rem';
         }
     });
 
