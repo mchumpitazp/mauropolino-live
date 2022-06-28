@@ -146,22 +146,22 @@
             <div id="education">
                 <h2 class="mt-2 mb-3"><strong>Education</strong></h2>
 
-                <div class="d-flex align-items-center">
-                    <h5 class="mr-1">BSc Electronics Engineering</h5>
-                    <a href="{% static 'myonlinecv/files/bachelor.pdf' %}" target="_blank" rel="noopener noreferrer">
-                        <i class="bi-link-45deg link-icon" style="font-size: 1.2rem;"></i>
+                <div class="d-flex">
+                    <h4 class="mr-1">BSc Electronics Engineering</h4>
+                    <a class="mt-1" href="{% static 'myonlinecv/files/bachelor.pdf' %}" target="_blank" rel="noopener noreferrer">
+                        <h5><i class="bi-link-45deg link-secondary-color"></i></h5>
                     </a>
                 </div>
                 
                 <div class="d-flex">
-                    <h5 class="secondary-color mr-1">University of Engineering and Technology</h5>
-                    <img width="19px" height="24px" src="{% static 'myonlinecv/media/utec.png' %}" alt="utec_logo">
+                    <h4 class="secondary-color mr-1">University of Engineering and Technology (UTEC)</h4>
+                    
                 </div>
                 
-                <h6>Computer Science elective courses: Cloud computing, Machine learning, Digital image processing and Algorithms and data structures</h6>
+                <h5>Computer Science elective courses: Cloud computing, Machine learning, Digital image processing and Algorithms and data structures.</h5>
                 <div class="d-flex">
-                    <h6 class="mr-3"><i class="bi-calendar3"></i> <small>2015 - 2021</small></h6>
-                    <h6><i class="bi-geo-alt"></i> <small>Lima, Perú</small></h6>
+                    <h5 class="mr-3"><i class="bi-calendar3"></i> <small>2015 - 2021</small></h5>
+                    <h5><i class="bi-geo-alt"></i> <small>Lima, Perú</small></h5>
                 </div>
             </div>
 
@@ -170,7 +170,7 @@
                 <div id="portfolio-header" class="d-flex align-items-center mt-2 mb-2">
                     <h2><strong>Portfolio</strong></h2 >
 
-                    <div class="custom-control custom-switch ml-4 mb-1" style="z-index: 0;">
+                    <div class="custom-control custom-switch ml-4 mb-1" style="z-index: 0; font-size: 3vh;">
                         <input type="checkbox" class="custom-control-input" id="portfolio-switch" checked>
                         <label class="custom-control-label" for="portfolio-switch"><small>Scale up</small></label>
                     </div>
@@ -261,15 +261,15 @@
 
                     <div class="d-flex flex-nowrap justify-content-around mt-4 mb-4">
                         <div class="language">
-                            <h5 class="language-level">NATIVE</h5>
+                            <h6 class="secondary-color">NATIVE</h6>
                             <h4>Spanish</h4>
                         </div>
                         <div class="language">
-                            <h5 class="language-level">ADVANCED</h5>
+                            <h6 class="secondary-color">ADVANCED</h6>
                             <h4>English</h4>
                         </div>
                         <div class="language">
-                            <h5 class="language-level">BASIC</h5>
+                            <h6 class="secondary-color">BASIC</h6>
                             <h4>Russian</h4>
                         </div>
                     </div>
@@ -286,9 +286,9 @@
                     <div class="d-flex flex-wrap justify-content-around mt-4 mb-4">
                         {% for coding_skill in coding_skills %}
                             <div class="coding">
-                                <h5>{{ coding_skill.name }}</h5>
+                                <h4>{{ coding_skill.name }}</h4>
                                 
-                                <div class="coding-level">
+                                <div>
                                     {% if coding_skill.name == "SQL" %}
                                         <div>
                                             <i class="bi-circle-fill mr-2"></i>
@@ -299,7 +299,7 @@
                                             <i class="bi-circle"></i>
                                             <i class="bi-circle"></i>
                                         </div>
-                                        <h6>BASIC</h6>
+                                        <h6 class="secondary-color">BASIC</h6>
                                     {% else %}
                                         <div>
                                             <i class="bi-circle-fill"></i>
@@ -316,7 +316,7 @@
                                             {% endif %}
                                         </div>
                                         
-                                        <h6>
+                                        <h6 class="secondary-color">
                                             INTERMEDIATE
                                             {% if coding_skill.level %}
                                             +
@@ -339,7 +339,7 @@
                     <div class="d-flex flex-wrap justify-content-around mt-4 mb-4">
                         
                         <div class="knowledge d-flex flex-column">
-                            <h6 class="knowledge-type">FRAMEWORKS</h6>
+                            <h6 class="secondary-color">FRAMEWORKS</h6>
                             <h5 class="knowledge-item">Django</h5>
                             <h5 class="knowledge-item">React</h5>
                             <h5 class="knowledge-item">Bootstrap</h5>
@@ -347,21 +347,22 @@
                         </div>
                         
                         <div class="knowledge d-flex flex-column">
-                            <span class="knowledge-type">TOOLS & IDEs</span>
-                            <span class="knowledge-item">Git</span>
-                            <span class="knowledge-item">MATLAB</span>
-                            <span class="knowledge-item">Xcode</span>
-                            <span class="knowledge-item">Android Studio</span>
+                            <h6 class="secondary-color">TOOLS & IDEs</h6>
+                            <h5 class="knowledge-item">Git</h5>
+                            <h5 class="knowledge-item">MATLAB</h5>
+                            <h5 class="knowledge-item">Xcode</h5>
+                            <h5 class="knowledge-item">Android Studio</h5>
                             
                         </div>
 
-                        <div class="knowledge d-flex flex-column">
-                            <span class="knowledge-type">EMBEDDED SYSTEMS</span>
-                            <span class="knowledge-item">MPLAB X</span>
-                            <span class="knowledge-item">Atmel Studio</span>
-                            <span class="knowledge-item">KiCad</span>
-                            <span class="knowledge-item">Multisim</span>
-                            <span class="knowledge-item">Proteus</span>
+
+                        <div id="embedded-systems" class="knowledge d-flex flex-column">
+                            <h6 class="secondary-color">EMBEDDED SYSTEMS</h6>
+                            <h5 class="knowledge-item">MPLAB X</h5>
+                            <h5 class="knowledge-item">Atmel Studio</h5>
+                            <h5 class="knowledge-item">KiCad</h5>
+                            <h5 class="knowledge-item">Multisim</h5>
+                            <h5 class="knowledge-item">Proteus</h5>
                         </div>
                     </div>
                 </div>
@@ -373,41 +374,51 @@
                 <h2 class="mt-2 mb-3"><strong>Experience</strong></h2>
 
                 <div class="d-flex align-items-center">
-                    <h5>
+                    <h4>
                         <i class="bi-briefcase mr-1"></i>
-                        Technology Developer</h5>
+                        Technology Developer
+                    </h4>
                 </div>
                 
                 <div class="d-flex">
-                    <h5 class="secondary-color">
+                    <h4 class="secondary-color">
                         <i class="bi-building mr-1"></i>
-                        Water Research and Technology Center (CITA)</h5>
+                        Water Research and Technology Center (CITA)
+                    </h4>
                 </div>
                 
-                <a class="link-text-icon" href="{% static 'myonlinecv/files/cita-letter.pdf' %}" target="_blank" rel="noopener noreferrer">
-                    <i class="bi-link-45deg" style="font-size: 1.2rem;"></i>
-                    Recomendation Letter
+                <a class="link-secondary-color" href="{% static 'myonlinecv/files/cita-letter.pdf' %}" target="_blank" rel="noopener noreferrer">
+                    <h5>
+                        <i class="bi-link-45deg"></i>
+                        Recomendation Letter
+                    </h5>
                 </a>
                 <div class="d-flex mt-2">
-                    <h6 class="mr-3"><i class="bi-calendar3"></i> <small>Sep 2020 - Nov 2021</small></h6>
-                    <h6><i class="bi-geo-alt"></i> <small>Lima, Perú</small></h6>
+                    <h5 class="mr-3"><i class="bi-calendar3"></i> <small>Sep 2020 - Nov 2021</small></h5>
+                    <h5><i class="bi-geo-alt"></i> <small>Lima, Perú</small></h5>
                 </div>
             </div>
 
             <div id="records" class="d-flex flex-column mt-3 pt-2">
                 <h2><strong>Records</strong></h2>
 
-                <a class="link-text-icon" href="https://www.credly.com/badges/6661a80c-878c-45af-8a41-bbb50f94a837" target="_blank" rel="noopener noreferrer">
-                    <i class="bi-link-45deg"></i>
-                    Python for Data Science by IBM
+                <a class="link-secondary-color" href="https://www.credly.com/badges/6661a80c-878c-45af-8a41-bbb50f94a837" target="_blank" rel="noopener noreferrer">
+                    <h5>
+                        <i class="bi-link-45deg"></i>
+                        Python for Data Science by IBM
+                    </h5>
                 </a>
-                <a class="link-text-icon" href="https://courses.cognitiveclass.ai/certificates/ff9dc540df0f48d0b7fbb476de31486c" target="_blank" rel="noopener noreferrer">
-                    <i class="bi-link-45deg"></i>
-                    SQL and Relational Databases 101 by IBM
+                <a class="link-secondary-color" href="https://courses.cognitiveclass.ai/certificates/ff9dc540df0f48d0b7fbb476de31486c" target="_blank" rel="noopener noreferrer">
+                    <h5>
+                        <i class="bi-link-45deg"></i>
+                        SQL and Relational Databases 101 by IBM
+                    </h5>
                 </a>
-                <a class="link-text-icon" href="{% static 'myonlinecv/files/productivity.pdf' %}" target="_blank" rel="noopener noreferrer">
-                    <i class="bi-link-45deg"></i>
-                    Mentor in Productivity Workshop
+                <a class="link-secondary-color" href="{% static 'myonlinecv/files/productivity.pdf' %}" target="_blank" rel="noopener noreferrer">
+                    <h5>
+                        <i class="bi-link-45deg"></i>
+                        Mentor in Productivity Workshop
+                    </h5>
                 </a>
             </div>
             

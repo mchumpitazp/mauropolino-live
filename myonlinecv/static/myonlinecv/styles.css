@@ -160,13 +160,12 @@ html,
     font-weight: 300;
 }
 
-.link-icon {
-    font-size: 1.1rem;
-    margin: 0.4rem 0;
+.link-secondary-color {
     color: white;
+    text-decoration: none;
 }
 
-.link-icon:hover {
+.link-secondary-color:hover {
     color: #00bfe1;
     text-decoration: none;
 }
@@ -348,10 +347,8 @@ html,
     text-align: center;
 }
 
-.language-level,
-.coding-level,
-.knowledge-type {
-    font-size: 0.8rem;
+.coding i {
+    font-size: 1.5vh;
     color: #00bfe1;
 }
 
@@ -368,17 +365,6 @@ html,
 .knowledge-item {
     font-size: 1.2rem;
 } */
-
-.link-text-icon {
-    font-size: 1.1rem;
-    margin: 0.4rem 0;
-    color: white;
-}
-
-.link-text-icon:hover {
-    color: #00bfe1;
-    text-decoration: none;
-}
 
 #modal-contact-me {
     color: black;
@@ -438,4 +424,8 @@ h5 {
 
 h6 {
     font-size: 2vh;
+}
+
+i {
+    font-size: inherit;
 }
