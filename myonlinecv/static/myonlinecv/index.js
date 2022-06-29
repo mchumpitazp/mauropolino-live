@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Window resize
     onWindowResize();
     
-    setInterval(() => {console.log("Come on, just do it!")}, 10000);
-    
 })
 
 async function initHeadline() {
@@ -349,9 +347,7 @@ function headerNavbar() {
 
     header.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
-            if (window.innerWidth < 992 & link.className != "navbar-brand") {
-                header.querySelector('.navbar-toggler').click()
-            }
+            let scrollY = 0;
 
             if (link.id === "a-portfolio") {
                 document.querySelector('#portfolio').scrollIntoView();
@@ -361,11 +357,20 @@ function headerNavbar() {
                 document.querySelector('#experience').scrollIntoView();
             } else if (link.id === "a-records") {
                 document.querySelector('#records').scrollIntoView();
+            }   
+
+            if (window.innerWidth < 992 & link.className != "navbar-brand") {
+                if (fnBrowserDetect() == 'safari') {
+                    scrollY = header.querySelector('.navbar-collapse').clientHeight;
+                    document.querySelector('body').scrollBy(0, -scrollY);
+                }
+                header.querySelector('.navbar-toggler').click();
             }
             
             if (link.id != "a-records") {
                 setTimeout(() => {
-                    const scrollY = 1.7 * document.querySelector('#header').querySelector('.nav-item').clientHeight;
+                    scrollY = 1.7 * header.querySelector('.nav-item').clientHeight;
+                    console.log(scrollY)
                     document.querySelector('body').scrollBy(0, -scrollY);
                 }, 10);
             }
@@ -373,6 +378,29 @@ function headerNavbar() {
         })
     });
 
+}
+
+function fnBrowserDetect() {
+                 
+    let userAgent = navigator.userAgent;
+    let browserName;
+    
+    if(userAgent.match(/chrome|chromium|crios/i)){
+        browserName = "chrome";
+      }else if(userAgent.match(/firefox|fxios/i)){
+        browserName = "firefox";
+      }  else if(userAgent.match(/safari/i)){
+        browserName = "safari";
+      }else if(userAgent.match(/opr\//i)){
+        browserName = "opera";
+      } else if(userAgent.match(/edg/i)){
+        browserName = "edge";
+      }else{
+        browserName="No browser detection";
+      }
+    
+    console.log(browserName);
+     return browserName;         
 }
 
 function onWindowResize() {
