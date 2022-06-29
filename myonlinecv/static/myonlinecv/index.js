@@ -353,12 +353,26 @@ function headerNavbar() {
                 header.querySelector('.navbar-toggler').click()
             }
 
-            setTimeout(() => {
-                const scrollY = 1.5 * document.querySelector('#header').querySelector('.navbar-brand').clientHeight;
-                document.querySelector('body').scrollBy(0, -scrollY);
-            }, 10);
+            if (link.id === "a-portfolio") {
+                document.querySelector('#portfolio').scrollIntoView();
+            } else if (link.id === "a-skills") {
+                document.querySelector('#skills').scrollIntoView();
+            } else if (link.id === "a-experience") {
+                document.querySelector('#experience').scrollIntoView();
+            } else if (link.id === "a-records") {
+                document.querySelector('#records').scrollIntoView();
+            }
+            
+            if (link.id != "a-records") {
+                setTimeout(() => {
+                    const scrollY = 1.2 * document.querySelector('#header').querySelector('.navbar').clientHeight;
+                    document.querySelector('body').scrollBy(0, -scrollY);
+                }, 10);
+            }
+           
         })
-    })
+    });
+
 }
 
 function onWindowResize() {
