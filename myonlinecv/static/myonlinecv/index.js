@@ -365,7 +365,7 @@ function headerNavbar() {
             
             if (link.id != "a-records") {
                 setTimeout(() => {
-                    const scrollY = 1.2 * document.querySelector('#header').querySelector('.navbar').clientHeight;
+                    const scrollY = 1.7 * document.querySelector('#header').querySelector('.nav-item').clientHeight;
                     document.querySelector('body').scrollBy(0, -scrollY);
                 }, 10);
             }
