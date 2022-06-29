@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 async function initHeadline() {
-    //await initTitle();
-    //await initSubtitle();
+    await initTitle();
+    await initSubtitle();
     await displayPortrait();
     setTimeout(() => subtitleAnimation(), 800);
     document.querySelector('body').style.overflowY = 'auto';
@@ -140,12 +140,12 @@ async function displayPortrait() {
         header.style.height = 'fit-content';
         header.style.position = 'sticky';
         header.style.top = '0';
-        header.style.zIndex = '999';
+        header.style.zIndex = '5';
 
         footer.style.height = 'fit-content';
         footer.style.position = 'sticky';
         footer.style.bottom = '0';
-        footer.style.zIndex = '999';
+        footer.style.zIndex = '5';
 
         document.querySelector('#headline').style.height = (window.innerHeight - header.clientHeight) + 'px'
 
@@ -246,10 +246,33 @@ async function switchOnProjectHover() {
 }
 
 function projectModal() {
+
+    // Overlay on click closes any modal
+    document.querySelector('#overlay').addEventListener('click', () => {
+        document.querySelector('#overlay').className = '';
+        document.querySelector('#modal').className   = '';
+        document.querySelector('#modal-contact-me').className = '';
+    })
+
+    // Modal for contact me
+    document.querySelector('#modal-contact-me-btn-close').addEventListener('click', () => {
+        document.querySelector('#modal-contact-me').className = ''
+        document.querySelector('#overlay').className = ''
+    });
+
+    document.querySelectorAll('.contact-me').forEach(btn_contact_me => {
+        btn_contact_me.addEventListener('click', () => {
+            document.querySelector('#modal-contact-me').className = 'active';
+            document.querySelector('#overlay').className = 'active';
+        })
+    })
+
+
+    // Modal for projects
     document.querySelector('#modal-btn-close').addEventListener('click', () => {
         document.querySelector('#modal').className   = ''
         document.querySelector('#overlay').className = ''
-    })
+    });
 
     document.querySelectorAll('.portfolio-child').forEach(project => {
         project.addEventListener('click', () => {

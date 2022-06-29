@@ -276,7 +276,8 @@ html,
 
 #modal-btn-close {
     position: absolute;
-    right: 0%;
+    top: 1%;
+    right: 1%;
     z-index: 10;
 }
 
@@ -369,25 +370,45 @@ html,
     margin: 0 0.25rem;
 }
 
-/* NOT NEEDED
-.knowledge-item {
-    font-size: 1.2rem;
-} */
-
 #modal-contact-me {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    z-index: 10;
+    background-color: white;
     color: black;
+    width: fit-content;
 }
 
-#modal-contact-me i{
-    font-size: 2.2rem;
-    margin: 1.5%;
+#modal-contact-me.active {
+    transform: translate(-50%, -50%) scale(1);
 }
 
+#modal-contact-me hr {
+    margin: 0;
+}
+
+#modal-contact-me-header {
+    padding: 1vh 2vh;
+    padding-right: 1vh;
+}
+
+#modal-contact-me-body {
+    padding: 1vh 2vh;
+}
+
+#modal-contact-me-btn-close i {
+    font-size: 1.5vh !important;
+    color: rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 2px;
+}
 #modal-contact-me .modal-link {
     display: flex;
     align-items: center;
 }
-
 
 #footer {
     color: rgba(255, 255, 255, 0.5);

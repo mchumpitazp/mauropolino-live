@@ -85,7 +85,7 @@
                         </p>
                     </div>
                     <div id="headline-left-contact">
-                        <button type="button" class="contact-me btn btn-outline-light" data-toggle="modal" data-target="#modal-contact-me"> 
+                        <button type="button" class="contact-me btn btn-outline-light"> 
                             Contact Me
                             <small><i style="-webkit-text-stroke: 1px;" class="bi-chevron-right"></i></small>
                         </button>
@@ -411,36 +411,34 @@
                 </a>
             </div>
             
-            <div id="modal-contact-me" class="modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">
+            <div id="modal-contact-me">
 
-                    <div class="modal-header">
-                    <h4 class="modal-title">Contact Me</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <h4 aria-hidden="true">&times;</h4>
+                <div id="modal-contact-me-header" class="d-flex justify-content-between align-items-center">
+                    <h4 style="margin: 0;">Contact Me</h4>
+                    <button id="modal-contact-me-btn-close" class="btn">
+                        <i class="bi-x-lg"></i>
                     </button>
-                    </div>
-                    <div class="modal-body">
-                    
-                        <h5 class="modal-link">
-                            <i class="bi-google"></i>
-                            mchumpitazp@gmail.com
-                        </h5>
-
-                        <h5 class="modal-link">
-                            <i style="color: #25d366;" class="bi-whatsapp"></i>
-                            +7 (925) 184-95-03
-                        </h5>
-
-                        <h5 class="modal-link">
-                            <i style="color: #0088cc;" class="bi-telegram"></i>
-                            <a style="color: #0088cc;" href="https://t.me/mchumpitazp" target="_blank" rel="noopener noreferrer">Send message</a>
-                        </h5>
-
-                    </div>
-
                 </div>
+
+                <hr>
+                
+                <div id="modal-contact-me-body">
+                
+                    <h5 class="modal-link mt-vh-2">
+                        <i class="bi-google mr-3"></i>
+                        mchumpitazp@gmail.com
+                    </h5>
+
+                    <h5 class="modal-link mt-vh-2">
+                        <i style="color: #25d366;" class="bi-whatsapp mr-3"></i>
+                        +7 (925) 184-95-03
+                    </h5>
+
+                    <h5 class="modal-link mt-vh-2 mb-vh-3">
+                        <i style="color: #0088cc;" class="bi-telegram mr-3"></i>
+                        <a style="color: #0088cc;" href="https://t.me/mchumpitazp" target="_blank" rel="noopener noreferrer">Send message</a>
+                    </h5>
+
                 </div>
             </div>
             
@@ -453,7 +451,7 @@
 
             <div id="footer-links" class="d-flex align-items-center" >
                 <h6 hidden>mchumpitazp@gmail.com</h6>
-                <h3 data-toggle="modal" data-target="#modal-contact-me" class="contact-me ml-3"><i style="font-size: inherit;" class="bi-envelope"></i></h3>
+                <h3 class="contact-me ml-3"><i style="font-size: inherit;" class="bi-envelope"></i></h3>
                 <a href="https://github.com/mchumpitazp" style="margin-left: 2vh;" target="_blank" rel="noopener noreferrer">
                     <h3><i style="font-size: inherit;" class="bi-github"></i></h3>
                 </a>
