@@ -360,7 +360,7 @@ function headerNavbar() {
             }   
 
             if (window.innerWidth < 992 & link.className != "navbar-brand") {
-                if (fnBrowserDetect() == 'safari') {
+                if (browserDetect() == 'safari') {
                     scrollY = header.querySelector('.navbar-collapse').clientHeight;
                     document.querySelector('body').scrollBy(0, -scrollY);
                 }
@@ -370,7 +370,6 @@ function headerNavbar() {
             if (link.id != "a-records") {
                 setTimeout(() => {
                     scrollY = 1.7 * header.querySelector('.nav-item').clientHeight;
-                    console.log(scrollY)
                     document.querySelector('body').scrollBy(0, -scrollY);
                 }, 10);
             }
@@ -380,7 +379,7 @@ function headerNavbar() {
 
 }
 
-function fnBrowserDetect() {
+function browserDetect() {
                  
     let userAgent = navigator.userAgent;
     let browserName;
@@ -399,8 +398,7 @@ function fnBrowserDetect() {
         browserName="No browser detection";
       }
     
-    console.log(browserName);
-     return browserName;         
+    return browserName;         
 }
 
 function onWindowResize() {
