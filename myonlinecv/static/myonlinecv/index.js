@@ -74,7 +74,7 @@ async function initTitle() {
         resolve();
     }, 300));
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 40; i++) {
         await new Promise((resolve) => setTimeout(() => {
             title.querySelectorAll('span').forEach((span) => {
                 if (span.innerHTML != "M" && span.innerHTML != "P") {
@@ -86,7 +86,11 @@ async function initTitle() {
             resolve();
         }, 60));
 
-        opac += 0.04
+        if (opac + 0.04 >= 1) {
+            opac = 1;
+        } else {
+            opac += 0.04
+        }
     }
 }
 
