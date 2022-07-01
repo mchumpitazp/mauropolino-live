@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-5ulhdi@6todg=ib&ukyaat($u4d4kv0*n5!cw+=oyyfsu)-8bp
 DEBUG = False
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['mauropolino.herokuapp.com', 'mauropolino.com', 'www.mauropolino.com']
+ALLOWED_HOSTS = ['mauropolino.herokuapp.com', 'www.mauropolino.com']
 
 
 # Application definition
