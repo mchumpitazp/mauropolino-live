@@ -79,6 +79,10 @@ html,
     opacity: 0.95;
 }
 
+.navbar a {
+    cursor: pointer;
+}
+
 #headline-left {
     padding: 0vh 6vh;
     max-height: 100%;
